@@ -7,7 +7,7 @@
 - chrome-example
   切换至项目根目录  
   运行: gradlew chrome-example:test --tests "com.see.enginerring.chrome.example.LoadPageFT.query" -Dspring.config.name=application,mongo-conf,mail-conf -Djasypt.encryptor.password= -Dspring.mail.username=  
-  即可使用chrome驱动打开页面（ https://shop112990768.taobao.com/ ），进行牛逼的模拟操作
+  即可使用chrome驱动打开页面（例： https://shop112990768.taobao.com/ ），进行牛逼的模拟操作
 
 - baicm-example
   示例：使用比HttpClient效率高百倍的Http/Https组件进行
