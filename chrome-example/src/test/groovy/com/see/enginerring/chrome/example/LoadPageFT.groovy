@@ -1,7 +1,7 @@
-package com.see.enginerring.chrome.example.mgtv
+package com.see.enginerring.chrome.example
 
 import com.see.enginerring.chrome.example.app.config.ChromeExampleAppConf
-import com.see.enginerring.chrome.example.mgtv.service.ChromeExampleService
+import com.see.enginerring.chrome.example.service.ChromeExampleService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.ContextConfiguration
@@ -14,7 +14,7 @@ import spock.lang.Specification
 @ContextConfiguration(classes = [
     ChromeExampleAppConf
 ])
-class QueryFT extends Specification {
+class LoadPageFT extends Specification {
 
     @Autowired
     private ChromeExampleService login

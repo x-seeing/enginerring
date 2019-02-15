@@ -1,4 +1,4 @@
-package com.see.enginerring.chrome.example.mgtv.service
+package com.see.enginerring.chrome.example.service
 
 import com.see.enginerring.chrome.WithChrome
 import geb.Browser
