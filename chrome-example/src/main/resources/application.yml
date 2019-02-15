@@ -1,0 +1,11 @@
+server:
+  port: 9012
+spring:
+  application:
+    name: view
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+
+

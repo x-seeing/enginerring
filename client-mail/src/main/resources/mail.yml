@@ -1,0 +1,12 @@
+spring:
+  mail:
+    host: smtp.126.com
+    username: mail@126.com
+    password: 密码
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: trueMailSenderClient
+            required: true

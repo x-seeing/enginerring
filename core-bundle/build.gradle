@@ -1,0 +1,11 @@
+dependencies {
+
+    compile project(':core')
+    compile project(':audit')
+    compile project(':client-mongo')
+    compile project(':client-mail')
+    compile 'org.springframework.boot:spring-boot-starter-cache'
+
+
+}
+

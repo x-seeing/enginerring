@@ -1,0 +1,3 @@
+mongodb:
+  uri: mongodb://localhost:25015/efrost
+

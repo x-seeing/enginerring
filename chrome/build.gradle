@@ -1,0 +1,23 @@
+dependencies {
+
+    compile project(':common')
+    compile 'org.seleniumhq.selenium:selenium-chrome-driver:3.141.59'
+    compile 'org.gebish:geb-core:2.3.1'
+
+
+}
+apply {
+    plugin 'com.energizedwork.webdriver-binaries'
+}
+
+ext {
+    drivers = ["chrome"]
+    ext {
+        gebVersion = '2.3.1'
+        seleniumVersion = '3.141.59'
+        chromeDriverVersion = '3.141.59'
+        geckoDriverVersion = '0.18.0'
+    }
+}
+
+

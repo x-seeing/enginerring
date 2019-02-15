@@ -1,0 +1,6 @@
+dependencies {
+
+    compile 'org.springframework.boot:spring-boot-starter-data-redis:2.1.1.RELEASE'
+
+
+}

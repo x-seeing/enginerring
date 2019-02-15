@@ -1,0 +1,129 @@
+/**
+ * Created by suyaqiang (sueeing@126.com) on 2019/1/20.
+ */
+buildscript {
+    ext {
+        springBootVersion = '2.1.0.RELEASE'
+        springBootStarterVersion = '2.1.0.RELEASE'
+        springVersion = '5.1.2.RELEASE'
+        spring_cloud_netflix_version = '2.0.2.RELEASE'
+        spring_cloud_version = '2.0.2.RELEASE'
+        spring_boot_admin = '2.1.1'
+        springfox_swagger = '2.7.0'
+
+    }
+    repositories {
+        maven { url maven_repo_internal }
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.6.RELEASE"
+        classpath 'org.codehaus.groovy:groovy-all:2.4.7:indy'
+    }
+}
+
+plugins {
+    id "io.spring.dependency-management" version "1.0.6.RELEASE"
+    id "com.energizedwork.webdriver-binaries" version "1.4"
+    id "com.energizedwork.idea-base" version "1.4"
+}
+
+allprojects {
+    apply {
+        plugin 'idea'
+        plugin 'java'
+        plugin 'groovy'
+        plugin 'org.springframework.boot'
+        plugin 'io.spring.dependency-management'
+        plugin 'project-report'
+    }
+    apply from: "$rootDir/gradle/env_settings.gradle"
+
+    repositories {
+//        jcenter()
+        maven { url maven_repo_internal }
+        mavenCentral()
+    }
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    dependencyManagement {
+        dependencies {
+            dependency "org.springframework.cloud:spring-cloud-starter-netflix-eureka-server:${spring_cloud_netflix_version}"
+            dependency "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:${spring_cloud_netflix_version}"
+            dependency "org.springframework.cloud:spring-cloud-starter-netflix-zuul:${spring_cloud_netflix_version}"
+            dependency "org.springframework.cloud:spring-cloud-starter-netflix-ribbon:${spring_cloud_netflix_version}"
+            dependency "org.springframework.cloud:spring-cloud-starter-openfeign:${spring_cloud_netflix_version}"
+            dependency "org.springframework.cloud:spring-cloud-starter-netflix-hystrix:${spring_cloud_netflix_version}"
+            dependency "org.springframework.cloud:spring-cloud-starter-netflix-hystrix-dashboard:${spring_cloud_netflix_version}"
+            dependency "org.springframework.cloud:spring-cloud-netflix-hystrix-stream:${spring_cloud_netflix_version}"
+
+            dependency "org.springframework.cloud:spring-cloud-starter-gateway:${spring_cloud_version}"
+            dependency "org.springframework.cloud:spring-cloud-config-server:${spring_cloud_version}"
+            dependency "org.springframework.cloud:spring-cloud-starter-config:${spring_cloud_version}"
+            dependency "org.springframework.cloud:spring-cloud-starter-zipkin:${spring_cloud_version}"
+            dependency "org.springframework.cloud:spring-cloud-starter-sleuth:${spring_cloud_version}"
+            dependency "org.springframework.cloud:spring-cloud-sleuth-zipkin:${spring_cloud_version}"
+
+            dependency "org.springframework.cloud:spring-cloud-starter-stream-rabbit:2.0.0.RELEASE"
+
+            dependency "de.codecentric:spring-boot-admin-starter-server:${spring_boot_admin}"
+            dependency "de.codecentric:spring-boot-admin-starter-client:${spring_boot_admin}"
+
+            dependency "org.springframework.boot:spring-boot-starter-actuator:${springBootStarterVersion}"
+            dependency "org.springframework.boot:spring-boot-starter-jetty:${springBootStarterVersion}"
+            dependency "org.springframework.boot:spring-boot-starter-web:${springBootStarterVersion}"
+            dependency "org.springframework.boot:spring-boot-starter-webflux:${springBootStarterVersion}"
+            dependency "org.springframework.boot:spring-boot-starter-actuator:${springBootStarterVersion}"
+            dependency "org.springframework.boot:spring-boot-starter-cache:${springBootStarterVersion}"
+            dependency "org.springframework.boot:spring-boot-starter-mail:${springBootStarterVersion}"
+
+            dependency 'com.github.ulisesbocchio:jasypt-spring-boot-starter:2.1.0'
+
+            dependency "org.springframework:spring-web:${springVersion}"
+            dependency "org.springframework:spring-aspects:${springVersion}"
+
+            dependency "io.springfox:springfox-swagger-ui:${springfox_swagger}"
+            dependency "io.springfox:springfox-swagger2:${springfox_swagger}"
+
+        }
+    }
+
+    dependencies {
+        compile 'org.codehaus.groovy:groovy-all:2.4.7:indy'
+        compile 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.1'
+
+        compile 'org.springframework.boot:spring-boot-starter-web'
+    }
+
+    bootJar {
+        enabled = true
+    }
+    jar {
+        enabled = true
+    }
+}
+
+subprojects {
+    configurations {
+        all {
+            resolutionStrategy {
+                eachDependency {
+//                    println it.requested.group
+                }
+            }
+        }
+
+    }
+
+    test {
+        testLogging.showStandardStreams = true
+        systemProperties = System.properties
+    }
+
+}

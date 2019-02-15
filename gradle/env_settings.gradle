@@ -1,0 +1,7 @@
+/**
+ * Spring Boot
+ */
+bootRun {
+    systemProperties = System.properties as Map
+}
+

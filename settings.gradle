@@ -1,0 +1,37 @@
+def project_name = 'enginerring'
+def skip_dirs = 'gradle'
+
+
+import static groovy.io.FileType.FILES
+import static groovy.io.FileVisitResult.SKIP_SUBTREE
+
+rootProject.name = project_name
+
+def skippedDirs = skip_dirs.tokenize ','
+def paths = [] as LinkedList
+(rootDir as File).traverse(
+    type: FILES,
+    nameFilter: ~/^build\.gradle$/,
+    maxDepth: 1,
+    preDir: {
+        if (it.name in skippedDirs) {
+            SKIP_SUBTREE
+        } else {
+            paths << it.name
+        }
+    },
+    postDir: {
+        if (paths) {
+            paths.removeLast()
+        }
+    }
+) {
+    if (paths) {
+        include paths[-1]
+    }
+}
+
+rootProject.children.each { project ->
+    def projectDirName = project.name
+    project.projectDir = [settingsDir, projectDirName] as File
+}

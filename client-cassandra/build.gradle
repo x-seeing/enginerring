@@ -1,0 +1,6 @@
+dependencies {
+
+    compile 'org.springframework.data:spring-data-cassandra:2.1.2.RELEASE'
+
+
+}

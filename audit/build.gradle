@@ -1,0 +1,6 @@
+dependencies {
+
+    compile project(':core')
+    compile project(':client-mongo')
+
+}

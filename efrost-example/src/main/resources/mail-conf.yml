@@ -1,0 +1,17 @@
+spring:
+  mail:
+    host: smtp.163.com
+    password: ENC(AK5fj0kySvd90uL3Pqz7eaqKndJoc2Ug)
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          port: 465
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+            fallback: false
+            port: 465
+
