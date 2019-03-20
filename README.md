@@ -2,6 +2,7 @@
 撸羊毛框架
 
 本框架采用http和chrome driver的方式，获取互联网中洒落的资源。用微小的成本即可捕鱼。
+博客地址：https://segmentfault.com/u/seeing_5bdbefbfea520/articles
 
 # 最佳实践
 - chrome-example
