@@ -1,6 +1,7 @@
 spring:
   mail:
     host: smtp.163.com
+    username: mailname
     password: ENC(AK5fj0kySvd90uL3Pqz7eaqKndJoc2Ug)
     properties:
       mail:
