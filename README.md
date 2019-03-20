@@ -1,9 +1,9 @@
 # enginerring
 撸羊毛框架
 
-本框架采用http和chrome driver的方式，获取互联网中洒落的资源。
+本框架采用http和chrome driver的方式，获取互联网中洒落的资源。用微小的成本即可捕鱼。
 
-# Which a dome
+# 最佳实践
 - chrome-example
   切换至项目根目录  
   运行: gradlew chrome-example:test --tests "com.see.enginerring.chrome.example.LoadPageFT.query" -Dspring.config.name=application,mongo-conf,mail-conf -Djasypt.encryptor.password= -Dspring.mail.username=  
@@ -17,16 +17,14 @@
   web集成视图应用
   
   
-  本框架根据自己每年平均500万行源码的阅读量，总结、创新许多的最佳实践。完全从零开始写起。
-  无论对于初级还是高级开发者都有很大的参考意义。也欢迎各位开发者、程序员/程序猿、大牛 提出issue & feature
+  本框架根据自己每年平均500万行源码的阅读量，总结、创新许多的最佳实践。完全从零开始写起。也欢迎各位开发者、程序员/程序猿、大牛 提出issue & feature
   
-# 最佳实践
-  - 利用EJB/spring的思想将web中的用户（User/Principal）提取为组件
-      参考：com.see.enginerring.efrost.web.controller.AuthController#principal
+# Which a dome & 
+  - 组件化
       详细资料，请查看（segmentfault.com）我写的文章。  -->>  https://segmentfault.com/u/seeing_5bdbefbfea520/articles
-  - 采用极其简单的方式集成spring/spring boot进行功能测试
+  - 采用极其简单的方式集成spring/spring boot进行测试驱动开发
       参考：com.see.enginerring.chrome.example.LoadPageFT
-  - 工业化，结构化的代码质量，采用clieng的方式集成功能组件
+  - 工业化，结构化的代码质量，采用client的方式集成功能组件
   - 等等等
   
   -- 未实践的地方：例如没有增强域模型的功能，命令查询的分离
@@ -38,7 +36,7 @@
   **suyaqiang**
   
   
-  - 都略过什么？
-  趣头条，10086，ICBC, 新华社，游戏平台，电商平台，OFO，携程 ... 
+  - 都略过：
+    10086，新华社，游戏平台，每日优鲜，淘宝联盟，OFO，携程， 趣头条，ICBC ... 
   
   
