@@ -22,7 +22,7 @@
   
 # Which a dome & 
   - 组件化
-      详细资料，请查看（segmentfault.com）我写的文章。  -->>  https://segmentfault.com/u/seeing_5bdbefbfea520/articles
+      详细资料，请查看（segmentfault.com）相关文章。  -->>  https://segmentfault.com/u/seeing_5bdbefbfea520/articles
   - 采用极其简单的方式集成spring/spring boot进行测试驱动开发
       参考：com.see.enginerring.chrome.example.LoadPageFT
   - 工业化，结构化的代码质量，采用client的方式集成功能组件
