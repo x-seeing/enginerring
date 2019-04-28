@@ -1,0 +1,18 @@
+server:
+  port: 9012
+spring:
+  application:
+    name: view
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+
+com:
+  see:
+    auth: true
+    password: ENC(XxmiZmt5GNdraGrwGo2YAA==)
+    escapeAuthUrls:
+      - /api/auth/login
+      - /api/auth/logout
+

@@ -4,6 +4,7 @@ dependencies {
 
     compile project(':baicm-example')
     compile project(':chrome-example')
+    compile project(':thruster')
 
     testCompile project(':test')
 
