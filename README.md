@@ -4,6 +4,9 @@
 本框架采用http和driver的方式，获取互联网中洒落的资源。用微小的成本即可捕鱼。
 博客地址：https://segmentfault.com/u/seeing_5bdbefbfea520/articles
 
+# 基础设施
+![Image text](https://github.com/x-seeing/enginerring/blob/master/thruster.png)
+
 # 最佳实践
 - chrome-example
   切换至项目根目录  
@@ -17,9 +20,7 @@
   visiting
   集成视图应用
   
-  
   本系统根据自己每年平均500万行源码的阅读量，6σ标准，总结、创新许多的最佳实践，完全从零开始写起。也欢迎各位开发者、程序员/程序媛、大牛 提出issue & feature
-  
   
 # Watch a dome &
   - 组件化
