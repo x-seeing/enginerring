@@ -7,7 +7,7 @@ import static com.see.core.http.Http.getC
 import static groovyx.net.http.ContentType.JSON
 
 /**
- * golang client
+ * golang client, for some modules
  * Created by suyaqiang on 2019/9/9.
  */
 @Component
