@@ -27,6 +27,10 @@ class AuditMessageTask {
     }
 
     void addQueue(Audit audit) {
+        // deny
+        if (QUEUE_LENGTH == queue.size()) {
+            return
+        }
         queue.add(audit)
     }
 
