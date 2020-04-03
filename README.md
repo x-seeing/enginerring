@@ -21,6 +21,6 @@ FYI：https://segmentfault.com/u/seeing_5bdbefbfea520/articles
   **苏亚强**
   
   
-    10086，新华社，游戏平台，每日优鲜，淘宝联盟，OFO，携程， 趣头条，ICBC，Microsoft，京东 ... 
+    10086，新华社，游戏平台，每日优鲜，淘宝联盟，OFO，携程， 趣头条，ICBC，Microsoft，华夏幸福 ... 
   
   
