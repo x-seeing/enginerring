@@ -1,8 +1,8 @@
-# eng
-撸羊毛框架
+# ENG
+羊毛框架
 
-本框架采用http和driver的方式，获取互联网中洒落的资源。用微小的成本即可捕鱼。
-博客地址：https://segmentfault.com/u/seeing_5bdbefbfea520/articles
+本框架使用driver模型，获取互联网中洒落的资源。用微小的成本即可捕鱼。
+FYI：https://segmentfault.com/u/seeing_5bdbefbfea520/articles
 
 # 基础设施
 ![Image text](https://github.com/x-seeing/enginerring/blob/master/thruster.png)
